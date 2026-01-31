@@ -1,0 +1,23 @@
+cd ~/Desktop/IA/Actividad01/Computacion-en-la-nube
+nano .dockerignore
+```
+
+Agrega este contenido:
+```
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.git/
+.gitignore
+.vscode/
+.idea/
+*.log
+.env

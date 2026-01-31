@@ -25,7 +25,7 @@ def predict_survival(data: Prediction):
     input_data = pd.DataFrame([data.dict()])
     
     # Preprocesamiento 
-    input_data['sexo'] = input_data['sexo'].map({'male': 0, 'female': 1})
+    input_data['sexo'] = input_data['sexo'].map({'m': 0, 'f': 1})
     input_data['clase'] = input_data['clase'].map({'First': 1, 'Second': 2, 'Third': 3})
     input_data = input_data.fillna(input_data.mean())
     
@@ -36,6 +36,6 @@ def predict_survival(data: Prediction):
     prediction = model.predict(features)
     
     # Interpretar resultado
-    survival = 'De buenas' if prediction[0] == 1 else 'chulo con papas'
+    survival = 'boleto pal proximo titanic' if prediction[0] == 1 else 'chulo con papas'
     
     return {"nivel de salades": survival}
