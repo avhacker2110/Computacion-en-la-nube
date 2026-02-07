@@ -19,7 +19,6 @@ class Prediction(BaseModel):
 def testapi():
     return {"API de predicción de supervivencia del Titanic"}
 
-# Convertir datos de entrada a DataFrame
 @app.post("/predict")
 def predict_survival(data: Prediction):
     # Convertir datos de entrada a DataFrame
